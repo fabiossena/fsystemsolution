@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <!-- <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script> -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Fábio Sena">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Feasible Systems and Solutions</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .image-fundo::before {
+            content: "";
+            background: url("./images/fundo.webp");
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.1;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.3/examples/carousel/carousel.css" rel="stylesheet">
+</head>
+
+<body style="width: fit-content;">
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Feasible Systems and Solutions</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#missao">Missão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-nos">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tecnologias">Tecnologias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#novidades">Novidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+
+        <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-body-tertiary image-fundo"
+            data-bs-theme="auto">
+
+            <div class="col-md-6 mx-auto">
+                <h1 class="display-3 fw-bold">Transforme Ideias em Tecnologia</h1>
+                <h6 class="fw-normal text-muted ">
+                    Solucionamos desafios com sistemas web únicos e aplicativos inovadores, confiáveis e seguros
+                </h6>
+                <h6 class="fw-normal text-muted mb-3">
+                    A Feasible Systems and Solutions é seu parceiro de tecnologia confiável, dedicado a fornecer
+                    soluções digitais de ponta.
+                    Somos especializados em desenvolvimento web, análise de dados, desenvolvimento de aplicativos e
+                    muito mais.
+                    Nossa equipe de especialistas está comprometida em fornecer atendimento personalizado, colaborando
+                    com você para entender suas necessidades comerciais exclusivas e fornecer soluções personalizadas
+                    para ajudá-lo a atingir seus objetivos.
+                    Com sistemas e soluções viáveis, você pode ter certeza de que sua solução digital está em boas mãos.
+                </h6>
+            </div>
+            <!-- <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
+        </div>
+    </div>
+
+    <!-- <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div> -->
+
+    <main>
+
+        <!-- <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing p-md-5 pt-5" id="servicos">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="images/web.webp" width="140" height="140" />
+                    <h2 class="fw-normal">Desenvolvimento de Sistemas Web Personalizados</h2>
+                    <p>
+                        Nossos serviços de desenvolvimento web abrangem uma variedade de soluções, desde a criação de
+                        sites personalizados até a otimização de sites existentes para desempenho e escalabilidade.
+                        Usamos as mais recentes tecnologias da web para criar sites responsivos, fáceis de usar e
+                        visualmente atraentes que ajudam as empresas a atingir seus objetivos digitais.
+                    </p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+
+                    <img src="images/analysis.webp" width="140" height="140" />
+                    <h2 class="fw-normal">Integração de Sistemas Web</h2>
+                    <p>
+                        Nossos serviços de análise de dados ajudam as empresas a tomar decisões informadas, fornecendo
+                        insights sobre seus dados. Oferecemos soluções completas, desde a coleta de dados até a análise
+                        e visualização, para ajudar as empresas a entender seus clientes, otimizar suas operações e
+                        melhorar seus resultados financeiros.
+                    </p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="images/app.webp" width="140" height="140" />
+                    <h2 class="fw-normal">Criação de Aplicativos Mobile</h2>
+                    <p>
+                        Nossos serviços de desenvolvimento de aplicativos são projetados para ajudar as empresas a criar
+                        aplicativos móveis envolventes e fáceis de usar. Trabalhamos com nossos clientes para entender
+                        suas necessidades e criar soluções personalizadas que atendam às suas necessidades exclusivas.
+                        Nossa equipe de desenvolvedores experientes usa as ferramentas e tecnologias mais recentes para
+                        criar aplicativos escaláveis, seguros e fáceis de usar.
+                    </p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider" id="missao">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="fw-normal lh-4">Transforme seu futuro digital<br />
+                        <span class="text-body-secondary">Soluções digitais inovadoras para o seu negócio.</span>
+                    </h2><br />
+                    <p class="lead">
+                        Como uma empresa de tecnologia, nos dedicamos a aproveitar os mais recentes avanços em
+                        tecnologia para ajudar nossos clientes a ter sucesso. Acreditamos em uma abordagem colaborativa,
+                        trabalhando em estreita colaboração com nossos clientes para entender suas necessidades únicas e
+                        entregar soluções personalizadas que superem as expectativas. Nossa equipe de especialistas está
+                        comprometida em fornecer um serviço superior e nos orgulhamos de nossa capacidade de fornecer
+                        soluções digitais inovadoras, confiáveis e seguras de forma consistente.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/vision.webp" width="500" height="500" />
+                </div>
+            </div>
+
+            <hr class="featurette-divider" id="sobre-nos">
+
+            <div class="row featurette">
+                <div class="col-md-6 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Sobre nós</h2><br />
+                    <p class="lead">
+                        Somos uma empresa de desenvolvimento de sistemas web e aplicativos localizada na região da
+                        capital de São Paulo, Brasil.
+                        <br />
+                        Nossa equipe altamente qualificada está comprometida em oferecer soluções inovadoras e
+                        eficientes para atender às necessidades de nossos clientes.
+                    </p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="images/us.webp" width="500" height="350" class="mt-5" />
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row" id="tecnologias">
+                <div class="col-md-12" id="praticas">
+                    <h2 class="featurette-heading fw-normal lh-1">Algumas de nossas <span
+                            class="text-body-secondary">práticas</span></h2>
+                    <!-- <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p> -->
+                </div>
+
+                <div class="col-md-12">
+                    <div class="container text-center">
+                        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/agile.png" width="200px" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/DDD.png" width="200px" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/mvc.jpg" width="200px" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/mvvm.png" width="200px" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/solid.png" width="200px" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/tdd.png" width="200px" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/openia.png" width="200px" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3"><img src="images/logos/cucumber.png" width="200px" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="featurette-heading fw-normal lh-1">Algumas de nossas <span
+                                class="text-body-secondary">tecnologias</span></h2>
+                        <!-- <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p> -->
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/php.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/laravel.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/eloquent.png" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/react.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/ant.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/material.jpg" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/js.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/ts.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/jquery.png" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/html.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/css.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/bootstrap.png" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/csharp.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/blazor.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/swagger.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/entity.jpg" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/maui.jpg" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/xamarin.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/xmal.jpg" width="200px" /></div>
+                        </div>
+                    </div>
+
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/docker.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/kubernets.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/azure.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/aws.png" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/sqlserver.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/mysql.png" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/maps.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/mapbox.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/openstreetmap.jpg" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/java.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/spring.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/hibernate.png" width="200px" /></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/excel.png" width="200px" /></div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3"><img src="images/logos/powerbi.jpg" width="200px" /></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="featurette-heading fw-normal lh-1">Algumas de nossas <span
+                                class="text-body-secondary">ferramentas</span></h2>
+                        <!-- <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p> -->
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="container text-center">
+                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                <div class="col">
+                                    <div class="p-3"><img src="images/logos/jira.png" width="200px" /></div>
+                                </div>
+                                <div class="col">
+                                    <div class="p-3"><img src="images/logos/confluence.png" width="200px" /></div>
+                                </div>
+                                <div class="col">
+                                    <div class="p-3"><img src="images/logos/discord.png" width="200px" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" id="novidades">
+                        <h2 class="featurette-heading fw-normal lh-1">Algumas de nossas <span
+                                class="text-body-secondary">novidades</span></h2>
+                        <!-- <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p> -->
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="container text-center">
+                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                <div class="col">
+                                    <div class="p-3"><img src="images/logos/nodejs.png" width="200px" /></div>
+                                </div>
+                                <div class="col">
+                                    <div class="p-3"><img src="images/logos/react_native.png" width="200px" /></div>
+                                </div>
+                                <div class="col">
+                                    <div class="p-3"><img src="images/logos/postgress.png" width="200px" /></div>
+                                </div>
+                                <div class="col">
+                                    <div class="p-3"><img src="images/logos/mongo.png" width="200px" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="elementor-element elementor-element-1be5ef4 e-con-full e-flex e-con e-child image-fundo2"
+                data-element_type="container" id="contato">
+                <h2 class="elementor-heading-title elementor-size-default">Feasible Systems and Solutions</h2>
+
+                <div>
+                    <span class="map-fundo  elementor-element elementor-element-e416375 e-con-full e-flex e-con e-child "
+                        data-id="e416375" data-element_type="container">
+                        <div class="elementor-element elementor-element-fd5bb13 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                            data-id="fd5bb13" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                                <ul class="elementor-icon-list-items">
+                                    <li class="elementor-icon-list-item">
+                                        <span class="elementor-icon-list-text">fabiossena@gmail.com</span>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <span class="elementor-icon-list-text">São Paulo, Brasil</span>
+                                    </li>
+                                    <li class="elementor-icon-list-item">
+                                        <span class="elementor-icon-list-text">+55 (11)9 9820-0402</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-end"><a href="#">top</a></p>
+                <p>&copy; 2018–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </footer>
+    </main>
+    
+    <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
