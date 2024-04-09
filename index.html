@@ -10,7 +10,6 @@
     <meta name="generator" content="Hugo 0.122.0">
     <title>Feasible Systems and Solutions</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link
         href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css"
@@ -131,10 +130,16 @@
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        
     </style>
 
     <link href="https://getbootstrap.com/docs/5.3/examples/carousel/carousel.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script>
+        setTimeout(function() {
+            var image = document.getElementsByClassName('image-fundo');
+            new simpleParallax(image);
+        },1000);
+    </script>
 </head>
 
 <body style="width: fit-content;">
@@ -226,10 +231,9 @@
         </nav>
     </header>
 
-    <div
-        class="position-relative overflow-hidden p-3 p-md-5 text-center bg-body-tertiary image-fundo">
-
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-body-tertiary image-fundo">
         <div class="col-md-6 mx-auto">
+            
             <h1 class="display-3 fw-bold">Transforme Ideias em Tecnologia</h1>
             <h6 class="fw-normal text-muted ">
                 Solucionamos desafios com sistemas web únicos e aplicativos inovadores, confiáveis e seguros
@@ -250,9 +254,9 @@
     <main>
         <div class="container marketing p-md-5 pt-5">
             <div class="row" id="servicos">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <img src="images/web.webp" width="140" height="140" />
-                    <h2 class="fw-normal">Desenvolvimento de Sistemas Web Personalizados</h2>
+                    <h2 class="fw-normal">Sistemas Web Personalizados</h2>
                     <p>
                         Nossos serviços de desenvolvimento web abrangem uma variedade de soluções, desde a criação de
                         sites personalizados até a otimização de sites existentes para desempenho e escalabilidade.
@@ -261,9 +265,9 @@
                     </p>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <img src="images/analysis.webp" width="140" height="140" />
-                    <h2 class="fw-normal">Integração de Sistemas Web</h2>
+                    <h2 class="fw-normal">Integração de Sistemas</h2>
                     <p>
                         Nossos serviços de análise de dados ajudam as empresas a tomar decisões informadas, fornecendo
                         insights sobre seus dados. Oferecemos soluções completas, desde a coleta de dados até a análise
@@ -272,7 +276,17 @@
                     </p>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-3">
+                    <img src="images/performance.jpg" width="140" height="140" />
+                    <h2 class="fw-normal">Performance Banco de Dados</h2>
+                    <p>
+                        Nos dedicamos a maximizar a eficiência e performance do seu banco de dados. 
+                        Nossa abordagem personalizada começa com uma análise profunda do seu ambiente de banco de dados, seguida por otimizações específicas para garantir operações fluidas
+                        . Implementamos sistemas de monitoramento proativo para detectar e resolver problemas rapidamente, garantindo segurança e conformidade dos seus dados.
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
                     <img src="images/app.webp" width="140" height="140" />
                     <h2 class="fw-normal">Criação de Aplicativos Mobile</h2>
                     <p>
@@ -294,7 +308,7 @@
 
                 <div class="col-md-7 order-md-1">
                     <h1>Transforme seu futuro digital<br />
-                        <span class="text-body-secondary">Soluções digitais inovadoras para o seu negócio.</span>
+                        <span class="text-body-secondary">Soluções digitais inovadoras para o seu negócio</span>
                     </h1><br />
                     <p class="lead">
                         Como uma empresa de tecnologia, nos dedicamos a aproveitar os mais recentes avanços em
