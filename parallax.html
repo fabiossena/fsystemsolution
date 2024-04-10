@@ -14,7 +14,8 @@
 
     .bgimg-1,
     .bgimg-2,
-    .bgimg-3 {
+    .bgimg-3,
+    .bgimg-4 {
       position: relative;
       opacity: 0.65;
       background-attachment: fixed;
@@ -25,17 +26,22 @@
     }
 
     .bgimg-1 {
-      background-image: url("images/image2.jpg");
+      background-image: url("images/image1.jpg");
       min-height: 100%;
     }
 
     .bgimg-2 {
-      background-image: url("images/image1.jpg");
+      background-image: url("images/image2.jpg");
       min-height: 400px;
     }
 
     .bgimg-3 {
-      background-image: url("images/image0gi.jpg");
+      background-image: url("images/image3.jpg");
+      min-height: 400px;
+    }
+
+    .bgimg-4 {
+      background-image: url("images/image4.jpg");
       min-height: 400px;
     }
 
@@ -86,6 +92,16 @@
       text-align: justify
     }
   </style>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script>
+      setTimeout(function() {
+          //var image = document.querySelectorAll('img');
+          var image = document.getElementsByClassName('class1');
+          new simpleParallax(image);
+      },1000);
+  </script>
 </head>
 
 <body>
@@ -132,12 +148,23 @@
     </div>
   </div>
 
+  <div class="bgimg-4">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="class2">
+      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+    </div>
+  </div>
+
   <div class="bgimg-1">
     <div class="caption">
       <span class="border">COOL!</span>
     </div>
   </div>
-
 </body>
 
 </html>
